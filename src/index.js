@@ -1,7 +1,7 @@
-console.log("It's working!!");
-import { loadHomeModule } from './src/home_module';
+import { loadHomeModule } from './home_module.js';
 
-const homeButton = getElementById("home-btn");
+const homeButton = document.getElementById("home-btn");
 homeButton.addEventListener("click", () => {
     loadHomeModule();
+    console.log("home button clicked");
 });
