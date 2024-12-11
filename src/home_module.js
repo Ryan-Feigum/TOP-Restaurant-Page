@@ -1,6 +1,8 @@
 function loadHomeModule() {
   const contentDiv = document.getElementById('content');
-    contentDiv.innerHTML = `
+  const newDiv = document.createElement('div');
+
+    newDiv.innerHTML = `
     <div class="container-fluid">
       <hr>
       <div class="jumbotron" align="center">
@@ -63,8 +65,10 @@ function loadHomeModule() {
     </div>
     `;
 
-    // Debugging to ensure module is loaded upon button click
-    console.log("Module loaded");
+  contentDiv.appendChild(newDiv);
+
+  // Debugging to ensure module is loaded upon button click
+  console.log("Module loaded");
 
 };
 

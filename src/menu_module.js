@@ -1,6 +1,7 @@
 function loadMenuModule() {
     const contentDiv = document.getElementById('content');
-    contentDiv.innerHTML = `<div class="container-fluid">
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = `<div class="container-fluid">
         
        <table class="table table-responsive">
            <tr style="text-align:center" id="itemName">
@@ -81,6 +82,11 @@ function loadMenuModule() {
                 555-555-5555
         </footer>
         </div>`;
+
+    contentDiv.appendChild(newDiv);
+
+    // Debugging to ensure module is loaded upon button click
+    console.log("Module loaded");
 };
 
 export { loadMenuModule };

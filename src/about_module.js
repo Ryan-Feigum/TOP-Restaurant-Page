@@ -1,6 +1,7 @@
 function loadAboutModule() {
     const contentDiv = document.getElementById('content');
-    contentDiv.innerHTML = `
+    const newDiv = document.createElement('div')
+    newDiv.innerHTML = `
                 <form style="text-align:center" action="#" method="post">
                 <div>
                     <label id="nameLabel" for="name" >Name:</label>
@@ -61,6 +62,11 @@ function loadAboutModule() {
             </form>
 
             <hr>`;
+
+    contentDiv.appendChild(newDiv);
+
+    // Debugging to ensure module is loaded upon button click
+    console.log("Module loaded");
 };
 
 export { loadAboutModule };
