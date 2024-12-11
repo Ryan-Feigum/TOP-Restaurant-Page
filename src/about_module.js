@@ -1,5 +1,6 @@
 function loadAboutModule() {
     const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = ``;
     const newDiv = document.createElement('div')
     newDiv.innerHTML = `
                 <form style="text-align:center" action="#" method="post">
